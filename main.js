@@ -1,19 +1,19 @@
 
 var users=[]
+var str=null
 
 function SignUp(username,password){
   var user={}
   user.username=username
   user.password=password
-  user.suggestedNextBook =Null
+  user.suggestedNextBook =null
   user.ReadBooks=[]
-  user.currentReadingBook=Null 
-  user.finishReading=finishReading
-  
+  user.currentReadingBook=null 
+  user.finishReading=finishReading 
   users.push(user)
 }
 
-
+var Firas=SignUp('firas','09134200')
 
 var finishReading=function(title){
  for (var i=0;i<Library.length;i++){
@@ -22,21 +22,20 @@ var finishReading=function(title){
  			ReadBooks.push(Library[i])
  		}
  	}
-
  }
 
  
 }
-function SignIn(username,password){
+function Login(username,password){
 	for (var i=0;i<users.length;i++){
 		for (var key in users[i]){
-			if(users[i].username===username&&users[i].password===password){
-				return 'need to complete this function'
-			}
-			return 'User not found'
-		}
-	}
+			if(username===users[i]['username']&&password===users[i]['password']){
 
+				 return str="file:///C:/Users/Firas/Desktop/First-solo-project/UserPage.html"
+			}	
+	}
+		} alert('User not found')
+		
 }
 
 
